@@ -2,6 +2,12 @@ import { LoaderArgs } from "@remix-run/node";
 import { eventStream } from "remix-utils";
 import { Configuration, OpenAIApi } from "openai";
 
+declare module "openai" {
+  interface CreateChatCompletionResponse {
+    on: (event: string, callback: (data: any) => void) => void;
+  }
+}
+
 let openai = new OpenAIApi(
   new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
