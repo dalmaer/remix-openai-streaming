@@ -1,0 +1,16 @@
+input,
+button,
+#results {
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 2em;
+}
+
+input {
+  width: 90%;
+}
+
+#readme {
+  margin: 1em;
+  padding: 0.5em;
+}
